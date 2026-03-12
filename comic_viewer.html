@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Your AI Comic</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body class="comic-page">
+
+<h1>Your AI Comic</h1>
+
+<div class="webtoon">
+
+{% for panel in layout %}
+
+<div class="panel fade-panel">
+
+<img src="/{{panel.image_path}}" class="comic-image">
+
+<div class="speech-bubble">
+{{panel.text}}
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+
+<!-- Buttons Section -->
+
+<div class="buttons">
+
+<a href="{{pdf_path}}" download>
+<button class="generate-btn">
+Download PDF
+</button>
+</a>
+
+<a href="/">
+<button class="generate-btn">
+Create Another Comic
+</button>
+</a>
+
+</div>
+
+
+<script src="/static/js/app.js"></script>
+
+</body>
+</html>

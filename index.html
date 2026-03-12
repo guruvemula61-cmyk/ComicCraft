@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>ComicCraft AI</title>
+<link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="hero">
+
+<h1 class="app-title">ComicCraft AI</h1>
+
+<p class="tagline">
+Create AI generated comics instantly using your story ideas
+</p>
+
+<div class="form-card">
+
+<form action="/generate" method="post">
+
+<textarea 
+name="prompt" 
+placeholder="Enter your story idea..."
+required
+></textarea>
+
+<input 
+name="character_name" 
+placeholder="Main Character Name"
+required
+>
+
+<input 
+name="setting" 
+placeholder="Story Setting (city, forest, space...)"
+required
+>
+
+<!-- Tone -->
+
+<select name="tone" required>
+
+<option value="" disabled selected>Select Story Tone</option>
+
+<option value="Adventure">Adventure</option>
+<option value="Action">Action</option>
+<option value="Drama">Drama</option>
+<option value="Funny">Funny</option>
+<option value="Mystery">Mystery</option>
+<option value="Horror">Horror</option>
+<option value="Romance">Romance</option>
+
+</select>
+
+
+<!-- Style -->
+
+<select name="style" required>
+
+<option value="" disabled selected>Select Art Style</option>
+
+<option value="Anime">Anime</option>
+<option value="Comic">Comic</option>
+<option value="Manga">Manga</option>
+<option value="Webtoon">Webtoon</option>
+<option value="Cartoon">Cartoon</option>
+<option value="Realistic">Realistic</option>
+<option value="Cyberpunk">Cyberpunk</option>
+
+</select>
+
+
+<button class="generate-btn">
+Generate Comic
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
